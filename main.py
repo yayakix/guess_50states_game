@@ -9,7 +9,7 @@ import pandas
 data = pandas.read_csv("50_states.csv")
 score = 0
 while score < 50:
-    answer_state = screen.textinput(title=f'Guess the State {score}/50',  prompt="What's another states name")
+    answer_state = screen.textinput(title=f'Guess the State {score}/50',  prompt="What's another states name").title()
     # print(answer_state)
     # print(data['state'])
     if answer_state in data['state'].values:
